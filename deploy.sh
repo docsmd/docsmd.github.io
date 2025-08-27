@@ -7,19 +7,14 @@ set -e
 npm run docs:build
 
 # navigate into the build output directory
-cd docs/.vitepress/dist
+cd ./docs/.vitepress/dist/
 
-# if you are deploying to a custom domain
-# echo 'www.example.com' > CNAME
-
+# init a new git repo in the dist folder
 git init
 git add -A
 git commit -m 'deploy'
 
-# if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:docsmd/docsmd.github.io.git main
-
-# if you are deploying to https://<USERNAME>.github.io/<REPO>
-# git push -f git@github.com:docsmd/docsmd.github.io.git main:gh-pages
+# push to the gh-pages branch
+git push -f git@github.com:docsmd/docsmd.github.io.git master:gh-pages
 
 cd -

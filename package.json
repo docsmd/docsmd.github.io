@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs && rm -rf dist && mkdir dist && cp -r docs/.vitepress/dist/* dist/ &&  rm -r docs/.vitepress/dist",
+    "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "keywords": [],
