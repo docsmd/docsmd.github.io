@@ -1,0 +1,18 @@
+{
+  "name": "vite-dsa-docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs && rm -rf dist && mkdir dist && cp -r docs/.vitepress/dist/* dist/ &&  rm -r docs/.vitepress/dist",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
